@@ -1,5 +1,11 @@
 [gd_scene format=3 uid="uid://dp1tm11osf4j"]
 
+[ext_resource type="Texture2D" uid="uid://dtakrdn21byx0" path="res://assets/sprites/animation_of_storing_things.png" id="1_ig7tw"]
+
 [node name="Main" type="Node2D" unique_id=1634772457]
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1297172997]
+
+[node name="AnimationOfStoringThings" type="Sprite2D" parent="." unique_id=79316286]
+position = Vector2(433, 377)
+texture = ExtResource("1_ig7tw")
