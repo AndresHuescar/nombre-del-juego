@@ -1,5 +1,8 @@
 [gd_scene format=3 uid="uid://dp1tm11osf4j"]
 
+[ext_resource type="Script" uid="uid://ulw2f2ep5p0h" path="res://main.gd" id="1_ig7tw"]
+
 [node name="Main" type="Node2D" unique_id=1634772457]
+script = ExtResource("1_ig7tw")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1297172997]
