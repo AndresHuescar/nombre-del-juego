@@ -1,15 +1,13 @@
-extends Sprite2D
+extends Node2D# (O CharacterBody2D, dependiendo del nodo que usaste en 2.1)
 
-@export var speed: float = 240.0
+# 1. Declaras tu nueva señal arriba del todo
+signal interact_requested
 
-func _process(delta: float) -> void:
-	var direction := 0.0
-	
-	# Ignoramos el Mapa de Entrada y forzamos la lectura física
-	if Input.is_physical_key_pressed(KEY_A):
-		direction = -1.0
-	if Input.is_physical_key_pressed(KEY_D):
-		direction = 1.0
-		
-	print("Lectura directa: ", direction)
-	position.x += direction * speed * delta
+# ... 
+# (Aquí en medio mantienes tu código de movimiento de la práctica anterior con speed, _process o _physics_process)
+# ...
+
+# 2. Añades la función que detecta la tecla y emite la señal
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed("interact"):
+		interact_requested.emit()
