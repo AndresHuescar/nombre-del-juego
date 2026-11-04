@@ -1,7 +1,5 @@
-# Registro de Pruebas de Exportación
-
-## Prueba 1 - Build de Escritorio (ZIP)
-* **Fecha:** 30/09/2026
-* **Plataforma:** Windows Desktop
-* **Resultado:** Éxito
-* **Observaciones:** La exportación del proyecto se ha realizado correctamente en un paquete comprimido (.zip). Se verifica que la escena principal y sus sprites están totalmente empaquetados y funcionales.
+## Prueba T2.1 - Movimiento del Jugador
+* **Fecha:** 13/10/2026
+* **Escena:** main.tscn / Icono
+* **Resultado:** Éxito.
+* **Observaciones:** El personaje se desplaza horizontalmente con las teclas A y D de forma fluida. Se ha comprobado por consola que la dirección cambia entre -1, 0 y 1. El uso de `delta` mantiene el movimiento estable independientemente de los FPS.

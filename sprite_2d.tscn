@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://c2lto3wb6u5e7"]
+
+[node name="Node2D" type="Node2D" unique_id=1808199790]
+position = Vector2(-497, -104)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1942710618]
+
+[node name="Timer" type="Timer" parent="Sprite2D" unique_id=512273889]
+
+[node name="Button" type="Button" parent="." unique_id=229845688]
+offset_left = 492.0
+offset_top = 101.0
+offset_right = 500.0
+offset_bottom = 109.0

@@ -1,5 +1,17 @@
 [gd_scene format=3 uid="uid://dp1tm11osf4j"]
 
-[node name="Main" type="Node2D" unique_id=1634772457]
+[ext_resource type="Script" uid="uid://ulw2f2ep5p0h" path="res://main.gd" id="1_h2yge"]
+[ext_resource type="PackedScene" uid="uid://c2lto3wb6u5e7" path="res://sprite_2d.tscn" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://p8txvitf2hs3" path="res://sprite_2d.gd" id="2_0xm2m"]
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1297172997]
+[node name="Main" type="Node2D" unique_id=378965513]
+script = ExtResource("1_h2yge")
+
+[node name="Player" parent="." unique_id=1808199790 instance=ExtResource("1_ig7tw")]
+position = Vector2(336, 291)
+script = ExtResource("2_0xm2m")
+
+[node name="RoundTimer" type="Timer" parent="." unique_id=691320258]
+
+[connection signal="interact_requested" from="Player" to="Player" method="_on_interact_requested"]
+[connection signal="timeout" from="RoundTimer" to="Player" method="_on_timer_timeout"]
